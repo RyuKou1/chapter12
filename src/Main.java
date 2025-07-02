@@ -1,14 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        Hero h = new Hero();
-        h.name = "勇者";
-        h.attack(new Matango());
-        h.attack(new Goblin());
-        h.attack(new Slime());
+        Character[] c = new Character[3];
+        c[0] = new Hero();
+        c[1] = new Wizard();
+        c[2] = new Thief();
 
-        Wizard w = new Wizard();
-        w.name = "魔法使い";
-        w.attack(new Goblin());
-        w.attack(new Slime());
+        Monster[] monsters = new Monster[3];
+        monsters[0] = new Matango();
+        monsters[1] = new Goblin();
+        monsters[2] = new Slime();
+
+        for(Character member : c){
+            for(Monster m : monsters){
+                member.attack(m);
+            }
+        }
     }
 }

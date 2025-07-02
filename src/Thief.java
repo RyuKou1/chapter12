@@ -12,8 +12,12 @@ public class Thief extends Character{
     }
 
     public void attack(Slime s){
-        System.out.println(this.name + "の攻撃！");;
+        System.out.println(this.name + "の攻撃！");
         System.out.println("敵に5ポイントのダメージ");
         s.hp -= 5;
+    }
+
+    public void attack(Monster m) {
+        m.hp -= 10;
     }
 }

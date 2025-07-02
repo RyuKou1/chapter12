@@ -16,4 +16,8 @@ public class Hero extends Character{
         System.out.println("敵に10ポイントのダメージ");
         s.hp -= 10;
     }
+
+    public void attack(Monster m) {
+        m.hp -= 10;
+    }
 }
